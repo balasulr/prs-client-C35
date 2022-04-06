@@ -11,6 +11,7 @@ import { E404Component } from './core/e404/e404.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserSearchPipe } from './user/user-search.pipe';
+import { UserDetailComponent } from './user/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserSearchPipe } from './user/user-search.pipe';
     E404Component,
     MenuComponent,
     UserListComponent,
-    UserSearchPipe
+    UserSearchPipe,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
