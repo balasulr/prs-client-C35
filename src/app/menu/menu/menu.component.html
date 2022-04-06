@@ -1,0 +1,8 @@
+<!-- Renders the menu horizontally on the page & want to space the menu items apart evenly. -->
+<nav>
+    <ul>
+        <li *ngFor="let m of menus">
+            <a routerLink="{{ m.route }}">{{ m.display }}</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,26 @@
+/* Adding CSS styling to the HTML to make the menu display correctly:
+- It is pinned to the top of the page and span the entire width of the page
+- The height should be just one normal text line
+- The background color should be in contrast to the rest of the page's background color
+- The menu items text color should be in contrast to the menu background color
+- The menu items should be evenly spaced apart
+*/
+nav {
+    background-color: #454545;
+}
+ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+li {
+    display: inline-block;
+}
+a {
+    color:silver;
+    padding: 0 10px;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    background-color: black;
+}
