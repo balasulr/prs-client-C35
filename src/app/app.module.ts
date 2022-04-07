@@ -9,9 +9,12 @@ import { HomeComponent } from './core/home/home.component';
 import { AboutComponent } from './core/about/about.component';
 import { E404Component } from './core/e404/e404.component';
 import { MenuComponent } from './menu/menu/menu.component';
+
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserSearchPipe } from './user/user-search.pipe';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
     MenuComponent,
     UserListComponent,
     UserSearchPipe,
-    UserDetailComponent
+    UserDetailComponent,
+    UserCreateComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,

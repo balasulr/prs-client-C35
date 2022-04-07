@@ -7,6 +7,8 @@ import { E404Component } from './core/e404/e404.component';
 // imports for user components:
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 const routes: Routes = [
   // routes for the home, about, and e404 components
@@ -17,6 +19,8 @@ const routes: Routes = [
   // routes for User components
   { path: "user/list", component: UserListComponent},
   { path: "user/detail/:id", component: UserDetailComponent},
+  { path: "user/create", component: UserCreateComponent},
+  { path: "user/edit/:id", component: UserEditComponent},
 
   { path: "**", component: E404Component} // Always the last component
 ];
