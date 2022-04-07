@@ -12,6 +12,7 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 // imports for vendor components:
 import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 
 const routes: Routes = [
   // routes for the home, about, and e404 components
@@ -28,6 +29,7 @@ const routes: Routes = [
   // routes for Vendor components
   { path: "vendor/list", component: VendorListComponent},
   { path: "vendor/detail/:id", component: VendorDetailComponent},
+  { path: "vendor/create", component: VendorCreateComponent},
 
   { path: "**", component: E404Component} // Always the last component
 ];
