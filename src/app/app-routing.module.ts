@@ -17,6 +17,7 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
 // imports for vendor components:
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
 
 const routes: Routes = [
   // routes for the home, about, and e404 components
@@ -39,6 +40,7 @@ const routes: Routes = [
   // routes for Product components
   { path: "product/list", component: ProductListComponent},
   { path: "product/detail/:id", component: ProductDetailComponent},
+  { path: "product/create", component: ProductCreateComponent},
 
   { path: "**", component: E404Component} // Always the last component
 ];

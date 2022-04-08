@@ -10,7 +10,7 @@ import { VendorService } from '../vendor.service';
 })
 export class VendorCreateComponent implements OnInit {
   // Property
-  vendor: Vendor = new Vendor(); // New User instance
+  vendor: Vendor = new Vendor(); // New Vendor instance
 
   constructor(
     private vendsvc: VendorService,
