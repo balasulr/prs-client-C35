@@ -27,17 +27,17 @@ export class VendorService {
     return this.http.get(`${this.baseUrl}/${id}`) as Observable<Vendor>;
   }
 
-  // create(user): insert
-  create(user: Vendor): Observable<Vendor> {
-    return this.http.post(`${this.baseUrl}`, user) as Observable<Vendor>;
+  // create(vendor): insert
+  create(vendor: Vendor): Observable<Vendor> {
+    return this.http.post(`${this.baseUrl}`, vendor) as Observable<Vendor>;
   }
 
-  // change(user): update
-  change(user: Vendor): Observable<any> {
-    return this.http.put(`${this.baseUrl}/${user.id}`,user) as Observable<any>;
+  // change(vendor): update
+  change(vendor: Vendor): Observable<any> {
+    return this.http.put(`${this.baseUrl}/${vendor.id}`,vendor) as Observable<any>;
   }
 
-  // remove(user): delete
+  // remove(vendor): delete
   remove(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`) as Observable<any>;
   }

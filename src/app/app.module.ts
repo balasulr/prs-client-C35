@@ -20,6 +20,8 @@ import { VendorSearchPipe } from './vendor/vendor-search.pipe';
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
 import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductSearchPipe } from './product/product-search.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
     VendorSearchPipe,
     VendorDetailComponent,
     VendorCreateComponent,
-    VendorEditComponent
+    VendorEditComponent,
+    ProductListComponent,
+    ProductSearchPipe
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
