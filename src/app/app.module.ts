@@ -28,6 +28,7 @@ import { ProductEditComponent } from './product/product-edit/product-edit.compon
 import { RequestListComponent } from './request/request-list/request-list.component';
 import { RequestSearchPipe } from './request/request-search.pipe';
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestCreateComponent } from './request/request-create/request-create.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { RequestDetailComponent } from './request/request-detail/request-detail.
     ProductEditComponent,
     RequestListComponent,
     RequestSearchPipe,
-    RequestDetailComponent
+    RequestDetailComponent,
+    RequestCreateComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
