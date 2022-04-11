@@ -19,6 +19,8 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
+// imports for request components:
+import { RequestListComponent } from './request/request-list/request-list.component';
 
 const routes: Routes = [
   // routes for the home, about, and e404 components
@@ -43,6 +45,9 @@ const routes: Routes = [
   { path: "product/detail/:id", component: ProductDetailComponent},
   { path: "product/create", component: ProductCreateComponent},
   { path: "product/edit/:id", component: ProductEditComponent},
+
+  // routes for Request components
+  { path: "request/list", component: RequestListComponent},
 
   { path: "**", component: E404Component} // Always the last component
 ];
