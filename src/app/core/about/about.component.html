@@ -1,4 +1,42 @@
 <!-- Renders the menu at the top of the page &
 app-menu is the selector in menu.component.ts -->
 <app-menu></app-menu>
-<p>about works!</p>
+<h3>Functions & Foreign Keys for 5 tables</h3>
+<hr>
+
+<h5>User:</h5>
+<ol>- Provides authentication for users wishing to use the PRS</ol>
+<ol>- Provides ownership for Requests created (who created and 'owns' them)</ol>
+<hr>
+
+<h5>Vendor:</h5>
+<ol>- Provides the name of the vendor from whom products are acquired </ol>
+<hr>
+
+<h5>Product:</h5>
+<ol>- Provides the list of products that can be added to a RequestLine </ol>
+<ol>- Provides the name and price of products</ol>
+<ol>- Has a Foreign Key to Vendor (VendorId) - holds the FK instance when reading a Product</ol>
+<hr>
+
+<h5>Request:</h5>
+<ol> The Request table is the heart of the PRS. Together with a collection of RequestLine rows makes up the
+    user's request of products. It has 3 functions:</ol>
+<ol>- Provides the grouping for all the products being requested.</ol>
+<ol> - Provides the user that created the request</ol>
+<ol> - Provides the total amount of all the products being requested</ol>
+<ol>Has a Foreign Key to User (UserId) - holds the FK instance when reading a Request</ol>
+<ol>Also, there is a virtual collection of RequestLine instances in the Request to hold the collection of lines related to this Request.</ol>
+<hr>
+
+<h5>RequestLine:</h5>
+<ol> - The RequestLine table implements a many-to-many relationship between the request and product tables. Each request can have multiple
+    requestLines and</ol>
+<ol> every product can have multiple lines. This means that every request can be related to multiple products and each product can be related to
+    multiple requests.</ol>
+<ol>- The RequestLine holds all the product for a particular request.</ol>
+<ol>- Has a Foreign Key to Product (ProductId) - holds the FK instance when reading a RequestLine for the Product</ol>
+<ol>- Has a Foreign Key to Request (RequestId) - holds the FK instance when reading a RequestLine for the Request. Had to include the
+    attribute [JsonIgnore] before </ol>
+<ol>the Request instance property in C# to resolve the cyclicial error that would have occurred without this </ol>
+<hr>
