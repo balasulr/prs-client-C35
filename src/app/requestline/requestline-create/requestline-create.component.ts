@@ -34,7 +34,7 @@ export class RequestlineCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.requestline.requestId = +this.route.snapshot.params["reqid"];
+    this.requestline.requestId = +this.route.snapshot.params["reqid"]; // Used in app-routing.module.ts
     this.prodsvc.list().subscribe({
       next: (res) => {
         console.debug("Products:", res);

@@ -24,6 +24,8 @@ import { RequestListComponent } from './request/request-list/request-list.compon
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
+// imports for requestline components:
+import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
 
 const routes: Routes = [
   // routes for the home, about, and e404 components
@@ -54,6 +56,9 @@ const routes: Routes = [
   { path: "request/detail/:id", component: RequestDetailComponent},
   { path: "request/create", component: RequestCreateComponent},
   { path: "request/edit/:id", component: RequestEditComponent},
+
+  // routes for Requestline components
+  { path: "requestlines/create/:reqid", component: RequestlineCreateComponent}, // reqid comes from requestline-create.component.ts
 
   { path: "**", component: E404Component} // Always the last component
 ];
