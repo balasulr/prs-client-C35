@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SystemService } from 'src/app/core/system.service';
 import { Menu } from '../menu.class';
 
 @Component({
@@ -15,10 +16,13 @@ export class MenuComponent implements OnInit {
     new Menu("Vendors", "/vendor/list"),
     new Menu("Products", "/product/list"),
     new Menu("Requests", "/request/list"),
-    new Menu("About", "/about")
+    new Menu("About", "/about"),
+    new Menu("Login", "/login")
   ]
 
-  constructor() { }
+  constructor(
+    private sys: SystemService
+  ) { }
 
   ngOnInit(): void {
   }

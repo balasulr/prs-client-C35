@@ -9,6 +9,7 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 // imports for vendor components:
 import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: "user/detail/:id", component: UserDetailComponent},
   { path: "user/create", component: UserCreateComponent},
   { path: "user/edit/:id", component: UserEditComponent},
+  { path: "login", component: UserLoginComponent},
 
   // routes for Vendor components
   { path: "vendor/list", component: VendorListComponent},

@@ -1,0 +1,21 @@
+<div id="login">
+    <div>
+        <span id="pageTitle">PRS Login:</span>
+    </div>
+    <div>
+        <table class="table table-sm table-borderless">
+            <tbody>
+                <tr>
+                    <th>Username:</th>
+                    <td><input [(ngModel)]="usr" name = "username" type="text"></td> <!-- Comes from user-login.component.ts -->
+                </tr>
+                <tr>
+                    <th>Password:</th>
+                    <td><input [(ngModel)]="pwd" name = "password" type="text"></td> <!-- Comes from user-login.component.ts -->
+                </tr>
+            </tbody>
+        </table>
+        <button (click)="login()" class="btn btn-primary">Login</button>
+        <span class="fw-bold text-danger">{{ messg }}</span>
+    </div>
+</div>
