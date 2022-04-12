@@ -17,6 +17,11 @@ export class UserService {
 
   // Adding functions:
 
+  // login(username, password) function
+  login(usrn: string, pwd: string): Observable<User> {
+    return this.http.get(`${this.baseUrl}/${usrn}/${pwd}`) as Observable<User>
+  }
+
   // list(): get all rows
   list(): Observable<User[]> {
     return this.http.get(`${this.baseUrl}`) as Observable<User[]>;
