@@ -22,9 +22,11 @@ export class UserLoginComponent implements OnInit {
   ) { }
 
   login(): void {
+    this.sys.user = null;
     this.usrsvc.login(this.usr, this.pwd).subscribe({
       next: (res) => {
         console.debug("Login successful!");
+        this.sys.user = res; // Res contains the user instance of systemservice
         this.router.navigateByUrl("/request/list")
       },
       error: (err) => {

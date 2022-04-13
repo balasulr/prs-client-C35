@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemService } from 'src/app/core/system.service';
 import { User } from 'src/app/user/user.class';
 import { UserService } from 'src/app/user/user.service';
 import { Request } from '../request.class';
@@ -13,12 +14,12 @@ import { RequestService } from '../request.service';
 export class RequestCreateComponent implements OnInit {
   // Property
   request: Request = new Request(); // New Request instance
-  users!: User[]; // Collection of Users
 
   constructor(
     private reqsvc: RequestService,
     private usesvc: UserService,
-    private router: Router
+    private router: Router,
+    private sys: SystemService
   ) { }
 
   save(): void {
@@ -35,12 +36,7 @@ export class RequestCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.usesvc.list().subscribe({
-      next: (res) => {
-        console.debug("Users:", res);
-        this.users = res;
-      }
-    });
+    this.request.userId = this.sys.user.id; // id of user logged in and put into request.userId
   }
 
 }
