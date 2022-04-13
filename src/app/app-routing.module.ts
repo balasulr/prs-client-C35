@@ -26,6 +26,8 @@ import { RequestDetailComponent } from './request/request-detail/request-detail.
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestLinesComponent } from './request/request-lines/request-lines.component';
+import { RequestReviewItemComponent } from './request/request-review-item/request-review-item.component';
+import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
 // imports for requestline components:
 import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
 import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
@@ -61,6 +63,8 @@ const routes: Routes = [
   { path: "request/create", component: RequestCreateComponent},
   { path: "request/edit/:id", component: RequestEditComponent},
   { path: "request/lines/:id", component: RequestLinesComponent},
+  { path: "request/review", component: RequestReviewListComponent},
+  { path: "request/review/:id", component: RequestReviewItemComponent},
 
   // routes for Requestline components
   { path: "requestline/create/:reqid", component: RequestlineCreateComponent}, // reqid comes from requestline-create.component.ts

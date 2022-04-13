@@ -1,0 +1,62 @@
+<app-menu></app-menu>
+<div> 
+    <span id="pageTitle">Requests in Review:</span>
+</div>
+<hr>
+
+<table *ngIf="request" class="table table-sm table-borderless">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Description</td>
+            <td *ngIf="request.rejectionReason">Rejection Reason</td>
+            <td>Status</td>
+            <td>Total</td>
+            <td>User</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ request.id }} </td>
+            <td>{{ request.description }}</td>
+            <td *ngIf="request.rejectionReason" class="text-danger">{{ request.rejectionReason }}</td>
+            <td>{{ request.status }}</td>
+            <td>{{ request.total | currency}}</td>
+            <td *ngIf="request.user">{{ request.user.username }}</td>
+            <td>
+                <button (click)="review()" class="btn btn-success">Review</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+
+<table class="table table-sm table-borderless">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Product</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Line Total</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reql of request.requestlines">
+            <td>{{ reql.id }}</td>
+            <td>{{ reql.product.name }}</td>
+            <td>{{ reql.quantity }}</td>
+            <td>{{ reql.product.price | currency }}</td>
+            <td>{{ reql.product.price * reql.quantity | currency }}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+
+<button (click)="approve()" class="btn btn-success">Approve</button> |
+<button (click)="reject()" class="btn text-danger">Reject</button>
+<span *ngIf="showVerifyButton">
+    || <input [(ngModel)]="request.rejectionReason" type="text" placeholder="Rejection Reason">
+    || <button (click)="verifyReject()" class="btn btn-danger">Verify Reject</button>
+</span>

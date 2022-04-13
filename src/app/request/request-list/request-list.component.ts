@@ -7,6 +7,7 @@ import { Request } from '../request.class';
   templateUrl: './request-list.component.html',
   styleUrls: ['./request-list.component.css']
 })
+
 export class RequestListComponent implements OnInit {
   // Property
   requests: Request[] = [];

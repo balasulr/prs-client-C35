@@ -21,7 +21,7 @@ export class RequestService {
   // requests(int id) => Retrieves all of the requests in review status but not owned by the user
   // whose primary key is id. The URL is api/request/reviews/5
   requests(id: number):Observable<Request[]> {
-    return this.http.get(`${this.baseUrl}/reviews/${id}`) as Observable<Request[]>;
+    return this.http.get(`${this.baseUrl}/review/${id}`) as Observable<Request[]>;
   }
 
   // list(): get all rows
