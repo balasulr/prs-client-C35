@@ -27,7 +27,7 @@ export class RequestlineCreateComponent implements OnInit {
     this.reqlsvc.create(this.requestline).subscribe ({
       next: (res) => {
         console.debug("Requestline added");
-        this.router.navigateByUrl(`/requests/lines/${this.requestline.requestId}`);
+        this.router.navigateByUrl(`/request/lines/${this.requestline.requestId}`);
       },
       error: (err) => { console.debug(err); }
     });

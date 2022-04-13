@@ -1,3 +1,4 @@
+import { Requestline } from "../requestline/requestline.class";
 import { User } from "../user/user.class";
 
 // Properties
@@ -9,6 +10,7 @@ export class Request {
     deliveryMode: string = "PICKUP";
     status: string = "NEW";
     total: number = 0;
+    requestlines!: Requestline[];
     
     // Has a Foreign Key to User
     userId: number = 0;
