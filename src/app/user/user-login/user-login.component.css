@@ -1,5 +1,24 @@
-#login {
+#whole {
     text-align: center;
+}
+
+#title {
+    margin-top: 75px;
+}
+
+#pageTitle {
+    margin-bottom: 80px;
+}
+
+#loginInfo {
+    display: inline-block;
+    width: 50%;
+    border: 1px solid grey;
+    margin-top: 10px;
+}
+
+#login {
+    margin-top: 15px;
 }
 
 #button {

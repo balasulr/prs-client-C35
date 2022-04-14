@@ -55,7 +55,7 @@
 <hr>
 
 <button (click)="approve()" class="btn btn-success">Approve</button> |
-<button (click)="reject()" class="btn text-danger">Reject</button>
+<button (click)="reject()" class="btn btn-danger">Reject</button>
 <span *ngIf="showVerifyButton">
     || <input [(ngModel)]="request.rejectionReason" type="text" placeholder="Rejection Reason">
     || <button (click)="verifyReject()" class="btn btn-danger">Verify Reject</button>

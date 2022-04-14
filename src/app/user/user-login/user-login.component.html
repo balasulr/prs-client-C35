@@ -1,12 +1,12 @@
-<div id="login">
-    <div>
+<div id="whole">
+    <div id="title">
         <span id="pageTitle">PRS Login:</span>
     </div>
-    <div>
+    <div id="loginInfo">
         <table class="table table-sm table-borderless">
             <tbody>
                 <tr>
-                    <th>Username:</th>
+                    <th id="usn">Username:</th>
                     <td><input [(ngModel)]="usr" name = "username" type="text"></td> <!-- Comes from user-login.component.ts -->
                 </tr>
                 <tr>
@@ -15,6 +15,9 @@
                 </tr>
             </tbody>
         </table>
+        
+    </div>
+    <div id="login">
         <button (click)="login()" class="btn btn-primary">Login</button>
         <span class="fw-bold text-danger">{{ messg }}</span>
     </div>
